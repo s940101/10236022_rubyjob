@@ -1,0 +1,32 @@
+<h1>Ruby Jobs</h1>
+
+<p style='text-align:right'><%= link_to 'New Job', new_job_path, class:'btn btn-success' %></p>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Posted</th>
+      <th>Job Title</Job></th>
+      <th>Company Name</th>
+      <th>Location</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.created_at.to_date %></td>
+        <td><%= link_to job.title, job %></td>
+        <td><%= job.company_name %></td>
+        <td><%= job.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @jobs, :theme => 'twitter-bootstrap-3' %>
+
+<br>
+
+
