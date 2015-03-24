@@ -12,42 +12,51 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, '標題名稱' %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :company_name %><br>
+    <%= f.label :company_name, '公司名稱' %><br>
     <%= f.text_field :company_name %>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
+    <%= f.label :url, '公司網址' %><br>
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :job_type %><br>
-    <%= f.text_field :job_type %>
+    <%= f.label :job_type, '工作類型（性質）' %><br>
+    <%= f.radio_button :job_type, 'full-time' %> 全職  
+    <%= f.radio_button :job_type, 'part-time' %> 兼職
+    <%= f.radio_button :job_type, 'contract' %> 合同  
+    <%= f.radio_button :job_type, 'internship' %> 實習  
+    <%= f.radio_button :job_type, 'other' %> 其他  
   </div>
   <div class="field">
-    <%= f.label :occupation %><br>
-    <%= f.text_field :occupation %>
+    <%= f.label :occupation, '職稱' %><br>
+    <%= f.radio_button :occupation, 'web back-end' %> Web back-end  
+    <%= f.radio_button :occupation, 'web front-end' %> Web front-end
+    <%= f.radio_button :occupation, 'web-design' %> Web-design  
+    <%= f.radio_button :occupation, 'qa/testing' %> QA/Testing  
+    <%= f.radio_button :occupation, 'other' %> Other 
   </div>
   
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label :location, '地點' %><br>
     <%= f.text_field :location %>
   </div>
   
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, '描述' %><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :apply_information %><br>
+    <%= f.label :apply_information, '應徵方式' %><br>
     <%= f.text_area :apply_information %>
   </div>
   <div class="field">
-    <%= f.label :deadline %><br>
+    <%= f.label :deadline, '最後期限' %><br>
     <%= f.date_select :deadline %>
+    <%= f.check_box :deadline %> Forever
   </div>
   <div class="actions">
     <%= f.submit %>

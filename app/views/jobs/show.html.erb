@@ -1,49 +1,74 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
+<table width="60%">
+  <tr>
+    <td style=width:100%>
+      <h3>
+        <strong>標題:</strong>
+        <%= @job.title %>
+      </h3>
+  
+      <p>
+        <strong>發布時間:</strong>
+        <%= @job.created_at.to_date %>
+      </p>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Job type:</strong>
-  <%= @job.job_type %>
-</p>
+<table width="60%">
+  <tr>
+    <td style=width:50%>
+      <p>
+        <strong>工作類型（性質）:</strong>
+        <%= @job.job_type %>
+      </p>
+    </td>
 
-<p>
-  <strong>Occupation:</strong>
-  <%= @job.occupation %>
-</p>
+    <td style=width:50%>
+      <p>
+        <strong>職稱:</strong>
+        <%= @job.occupation %>
+      </p>
+    </td>
+  </tr>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @job.company_name %>
-</p>
+  <tr>
+    <td style=width:50%>
+      <p>
+        <strong>公司名稱:</strong>
+        <%= @job.company_name %>
+      </p>
+    </td>
 
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
+    <td style=width:50%>
+      <p>
+        <strong>地址:</strong>
+        <%= @job.location %>
+      </p>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Url:</strong>
-  <%= @job.url %>
-</p>
+<table width="60%">
+  <tr>
+    <td>
+      <p>
+        <strong>描述:</strong>
+        <%= @job.description %>
+      </p>
+    </td>
+  </tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-
-<p>
-  <strong>Apply information:</strong>
-  <%= @job.apply_information %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @job.deadline %>
-</p>
+  <tr>
+    <td>
+      <p>
+        <strong>應徵方式:</strong>
+        <%= @job.apply_information %>
+      </p>
+    </td>
+  </tr>
+</table>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
